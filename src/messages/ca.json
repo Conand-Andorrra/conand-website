@@ -53,6 +53,20 @@
     "bronze": "Patrocinadors Bronze",
     "collaborator": "Col·laboradors"
   },
+  "contact": {
+    "name": "Nom",
+    "email": "Correu electrònic",
+    "subject": "Assumpte",
+    "message": "Missatge",
+    "send": "Enviar",
+    "sending": "Enviant...",
+    "success": "Missatge enviat correctament! Et respondrem aviat.",
+    "error": "Error en enviar el missatge. Torna-ho a provar.",
+    "namePlaceholder": "El teu nom",
+    "emailPlaceholder": "el.teu@correu.com",
+    "subjectPlaceholder": "De què es tracta?",
+    "messagePlaceholder": "Escriu el teu missatge aquí..."
+  },
   "gallery": {
     "title": "Galeria",
     "subtitle": "Els nostres moments",

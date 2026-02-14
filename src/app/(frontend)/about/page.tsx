@@ -4,7 +4,8 @@ import { t as translate } from '@/lib/i18n'
 import { getLocale } from '@/lib/locale'
 import type { Media } from '@/payload-types'
 import { getMediaUrl } from '@/lib/media'
-import { Mail, ArrowRight } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import { ContactForm } from '@/components/sections/ContactForm'
 
 export default async function AboutPage() {
   const locale = await getLocale()
@@ -33,7 +34,20 @@ export default async function AboutPage() {
     ? getMediaUrl(settings.about.aboutImage2 as Media)
     : '/img/conand_0_img2_opt.jpg'
 
-  const contactEmail = settings?.general?.contactEmail || 'contact@con.ad'
+  const contactT = {
+    name: translate(locale, 'contact.name'),
+    email: translate(locale, 'contact.email'),
+    subject: translate(locale, 'contact.subject'),
+    message: translate(locale, 'contact.message'),
+    send: translate(locale, 'contact.send'),
+    sending: translate(locale, 'contact.sending'),
+    success: translate(locale, 'contact.success'),
+    error: translate(locale, 'contact.error'),
+    namePlaceholder: translate(locale, 'contact.namePlaceholder'),
+    emailPlaceholder: translate(locale, 'contact.emailPlaceholder'),
+    subjectPlaceholder: translate(locale, 'contact.subjectPlaceholder'),
+    messagePlaceholder: translate(locale, 'contact.messagePlaceholder'),
+  }
 
   return (
     <>
@@ -86,23 +100,19 @@ export default async function AboutPage() {
       {/* Contact */}
       <section id="contact" className="relative border-t border-white/5 py-24">
         <div className="relative mx-auto max-w-[1280px] px-6">
-          <div className="glass mx-auto max-w-2xl rounded-3xl p-10 text-center md:p-14">
-            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-turquoise/10">
-              <Mail className="h-7 w-7 text-turquoise" />
+          <div className="glass mx-auto max-w-2xl rounded-3xl p-8 md:p-12">
+            <div className="mb-8 text-center">
+              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-turquoise/10">
+                <Mail className="h-7 w-7 text-turquoise" />
+              </div>
+              <h2 className="mb-3 font-teko text-3xl font-bold text-beige md:text-4xl">
+                {translate(locale, 'home.contactTitle')}
+              </h2>
+              <p className="text-beige/50">
+                {translate(locale, 'home.contactText')}
+              </p>
             </div>
-            <h2 className="mb-3 font-teko text-3xl font-bold text-beige md:text-4xl">
-              {translate(locale, 'home.contactTitle')}
-            </h2>
-            <p className="mb-8 text-beige/50">
-              {translate(locale, 'home.contactText')}
-            </p>
-            <a
-              href={`mailto:${contactEmail}`}
-              className="inline-flex items-center gap-2 rounded-xl bg-turquoise px-8 py-3.5 font-semibold text-dark transition-all hover:shadow-lg hover:shadow-turquoise/25"
-            >
-              {contactEmail}
-              <ArrowRight className="h-4 w-4" />
-            </a>
+            <ContactForm t={contactT} />
           </div>
         </div>
       </section>

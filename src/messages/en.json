@@ -53,6 +53,20 @@
     "bronze": "Bronze Sponsors",
     "collaborator": "Collaborators"
   },
+  "contact": {
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Message sent successfully! We'll get back to you soon.",
+    "error": "Failed to send message. Please try again.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "subjectPlaceholder": "What is this about?",
+    "messagePlaceholder": "Write your message here..."
+  },
   "gallery": {
     "title": "Gallery",
     "subtitle": "Our moments",

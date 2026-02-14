@@ -53,6 +53,20 @@
     "bronze": "Patrocinadores Bronce",
     "collaborator": "Colaboradores"
   },
+  "contact": {
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado correctamente! Te responderemos pronto.",
+    "error": "Error al enviar el mensaje. Inténtalo de nuevo.",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "tu@correo.com",
+    "subjectPlaceholder": "¿De qué se trata?",
+    "messagePlaceholder": "Escribe tu mensaje aquí..."
+  },
   "gallery": {
     "title": "Galeria",
     "subtitle": "Nuestros momentos",

@@ -436,18 +436,20 @@ async function seed() {
 
   // ─── CREATE ADMIN USER ───────────────────────────────────
   console.log('👤 Creating admin user...')
+  const adminEmail = process.env.ADMIN_EMAIL || 'info@conand.ad'
+  const adminPassword = process.env.ADMIN_PASSWORD || 'admin1234'
   const existingUsers = await payload.find({ collection: 'users', limit: 1 })
   if (existingUsers.docs.length === 0) {
     await payload.create({
       collection: 'users',
       data: {
-        email: 'admin@con.ad',
-        password: 'admin1234',
+        email: adminEmail,
+        password: adminPassword,
         name: 'Admin',
         role: 'admin',
       },
     })
-    console.log('  ✅ Admin user created: admin@con.ad / admin1234')
+    console.log(`  ✅ Admin user created: ${adminEmail}`)
   } else {
     console.log('  ⏭️  Admin user already exists')
   }

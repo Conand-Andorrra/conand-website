@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Teko, Karla } from 'next/font/google'
 import { getLocale } from '@/lib/locale'
 import './globals.css'
+
+const gaId = process.env.NEXT_PUBLIC_GA_ID
 
 const teko = Teko({
   subsets: ['latin'],
@@ -33,6 +36,14 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      {gaId && (
+        <head>
+          <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
+          <Script id="gtag-init" strategy="afterInteractive">
+            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${gaId}');`}
+          </Script>
+        </head>
+      )}
       <body
         className={`${teko.variable} ${karla.variable} font-karla bg-dark text-beige antialiased`}
       >
