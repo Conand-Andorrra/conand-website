@@ -61,7 +61,7 @@ export function EventCard({ event, locale, t, dateFormatted }: EventCardProps) {
           <p className="mb-5 line-clamp-2 text-sm leading-relaxed text-beige/50">{descriptionText}</p>
         )}
         <div className="flex flex-wrap gap-2">
-          {event.actionButtons?.callForPapersEnabled && event.actionButtons.callForPapersUrl && (
+          {isUpcoming && event.actionButtons?.callForPapersEnabled && event.actionButtons.callForPapersUrl && (
             <a
               href={event.actionButtons.callForPapersUrl}
               target="_blank"
@@ -72,7 +72,7 @@ export function EventCard({ event, locale, t, dateFormatted }: EventCardProps) {
               {t.callForPapers}
             </a>
           )}
-          {event.actionButtons?.ticketsEnabled && event.actionButtons.ticketsUrl && (
+          {isUpcoming && event.actionButtons?.ticketsEnabled && event.actionButtons.ticketsUrl && (
             <a
               href={event.actionButtons.ticketsUrl}
               target="_blank"

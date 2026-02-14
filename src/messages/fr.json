@@ -4,7 +4,8 @@
     "events": "Événements",
     "about": "À Propos",
     "contact": "Contact",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "gallery": "Galerie"
   },
   "buttons": {
     "callForSpeakers": "Appel à Conférenciers",
@@ -51,6 +52,12 @@
     "silver": "Sponsors Argent",
     "bronze": "Sponsors Bronze",
     "collaborator": "Collaborateurs"
+  },
+  "gallery": {
+    "title": "Galerie",
+    "subtitle": "Nos moments",
+    "description": "Revivez les meilleurs moments de nos evenements: conferences, meetups, ateliers et networking. Chaque image capture l'essence de la communaute tech d'Andorre.",
+    "noImages": "Les images seront disponibles prochainement."
   },
   "notFound": {
     "title": "Page non trouvée",

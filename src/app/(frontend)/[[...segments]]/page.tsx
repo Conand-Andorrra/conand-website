@@ -55,14 +55,14 @@ export default async function HomePage() {
         tagline="Andorra tech conference by the community, for the community."
         nextEventName={nextEvent?.name}
         nextEventDate={nextEvent?.date}
-        primaryButton={
-          nextEvent && settings?.hero?.heroPrimaryButtonText && settings?.hero?.heroPrimaryButtonUrl
-            ? { text: settings.hero.heroPrimaryButtonText, url: settings.hero.heroPrimaryButtonUrl }
+        cfpButton={
+          nextEvent?.actionButtons?.callForPapersEnabled && nextEvent.actionButtons.callForPapersUrl
+            ? { text: translate(locale, 'buttons.callForPapers'), url: nextEvent.actionButtons.callForPapersUrl }
             : undefined
         }
-        secondaryButton={
-          nextEvent && settings?.hero?.heroSecondaryButtonText && settings?.hero?.heroSecondaryButtonUrl
-            ? { text: settings.hero.heroSecondaryButtonText, url: settings.hero.heroSecondaryButtonUrl }
+        ticketsButton={
+          nextEvent?.actionButtons?.ticketsEnabled && nextEvent.actionButtons.ticketsUrl
+            ? { text: translate(locale, 'buttons.tickets'), url: nextEvent.actionButtons.ticketsUrl }
             : undefined
         }
         countdownLabels={{

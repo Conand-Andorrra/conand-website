@@ -62,6 +62,12 @@ export function Footer({ locale, t, social }: FooterProps) {
                 {t.home}
               </Link>
               <Link
+                href={localePath('/gallery', locale)}
+                className="text-sm text-beige/50 transition-colors hover:text-turquoise"
+              >
+                {t.gallery}
+              </Link>
+              <Link
                 href={localePath('/about', locale)}
                 className="text-sm text-beige/50 transition-colors hover:text-turquoise"
               >

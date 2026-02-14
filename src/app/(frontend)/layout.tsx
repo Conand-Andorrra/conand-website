@@ -25,12 +25,14 @@ export default async function FrontendLayout({
   const navT = {
     home: translate(locale, 'nav.home'),
     events: translate(locale, 'nav.events'),
+    gallery: translate(locale, 'nav.gallery'),
     about: translate(locale, 'nav.about'),
     contact: translate(locale, 'nav.contact'),
   }
 
   const footerT = {
     home: translate(locale, 'nav.home'),
+    gallery: translate(locale, 'nav.gallery'),
     about: translate(locale, 'nav.about'),
     contact: translate(locale, 'nav.contact'),
     followUs: translate(locale, 'home.followUs'),

@@ -37,6 +37,7 @@ export function Header({ locale, t, events = [] }: HeaderProps) {
 
   const navLinks = [
     { label: t.home, href: localePath('/', locale) },
+    { label: t.gallery, href: localePath('/gallery', locale) },
     { label: t.about, href: localePath('/about', locale) },
     { label: t.contact, href: localePath('/about#contact', locale) },
   ]

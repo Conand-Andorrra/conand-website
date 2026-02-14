@@ -4,7 +4,8 @@
     "events": "Eventos",
     "about": "Sobre Nosotros",
     "contact": "Contacto",
-    "faq": "Preguntas Frecuentes"
+    "faq": "Preguntas Frecuentes",
+    "gallery": "Galeria"
   },
   "buttons": {
     "callForSpeakers": "Convocatoria de Ponentes",
@@ -51,6 +52,12 @@
     "silver": "Patrocinadores Plata",
     "bronze": "Patrocinadores Bronce",
     "collaborator": "Colaboradores"
+  },
+  "gallery": {
+    "title": "Galeria",
+    "subtitle": "Nuestros momentos",
+    "description": "Revive los mejores momentos de nuestros eventos: conferencias, meetups, talleres y networking. Cada imagen captura la esencia de la comunidad tech de Andorra.",
+    "noImages": "Las imagenes estaran disponibles proximamente."
   },
   "notFound": {
     "title": "Página no encontrada",

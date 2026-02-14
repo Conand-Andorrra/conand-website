@@ -4,7 +4,8 @@
     "events": "Events",
     "about": "About Us",
     "contact": "Contact",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "gallery": "Gallery"
   },
   "buttons": {
     "callForSpeakers": "Call for Speakers",
@@ -51,6 +52,12 @@
     "silver": "Silver Sponsors",
     "bronze": "Bronze Sponsors",
     "collaborator": "Collaborators"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Our moments",
+    "description": "Relive the best moments from our events: conferences, meetups, workshops and networking. Each image captures the essence of Andorra's tech community.",
+    "noImages": "Images will be available soon."
   },
   "notFound": {
     "title": "Page not found",
