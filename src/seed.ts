@@ -6,6 +6,11 @@ async function seed() {
   console.log('🌱 Starting seed...')
   const payload = await getPayload()
 
+  // Run migrations to ensure tables exist
+  console.log('📦 Running migrations...')
+  await payload.db.migrateFresh({ forceAcceptWarning: true })
+  console.log('  ✅ Migrations complete')
+
   // Clear existing data
   console.log('🗑️  Clearing existing data...')
   const collections = ['events', 'speakers', 'sponsors', 'media'] as const
