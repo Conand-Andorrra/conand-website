@@ -4,12 +4,16 @@ import fs from 'fs'
 
 async function seed() {
   console.log('🌱 Starting seed...')
-  const payload = await getPayload()
 
-  // Run migrations to ensure tables exist
-  console.log('📦 Running migrations...')
-  await payload.db.migrateFresh({ forceAcceptWarning: true })
-  console.log('  ✅ Migrations complete')
+  // Temporarily set NODE_ENV to development so Payload pushes the schema (creates tables)
+  const originalNodeEnv = process.env.NODE_ENV
+  ;(process.env as Record<string, string | undefined>).NODE_ENV = 'development'
+
+  const payload = await getPayload()
+  console.log('  ✅ Schema ready')
+
+  // Restore NODE_ENV
+  ;(process.env as Record<string, string | undefined>).NODE_ENV = originalNodeEnv
 
   // Clear existing data
   console.log('🗑️  Clearing existing data...')
