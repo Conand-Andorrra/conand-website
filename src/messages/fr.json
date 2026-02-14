@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "events": "Événements",
+    "about": "À Propos",
+    "contact": "Contact",
+    "faq": "FAQ"
+  },
+  "buttons": {
+    "callForSpeakers": "Appel à Conférenciers",
+    "register": "S'inscrire",
+    "callForPapers": "Appel à Communications",
+    "tickets": "Billets",
+    "learnMore": "En Savoir Plus"
+  },
+  "home": {
+    "saveTheDate": "Réservez la Date!",
+    "nextEvent": "Prochain Événement",
+    "aboutTitle": "À Propos de CONAND",
+    "contactTitle": "Contactez-nous",
+    "contactText": "Vous avez des questions ou besoin de plus d'informations? N'hésitez pas à nous contacter!",
+    "sponsorsTitle": "Nos Sponsors",
+    "followUs": "Suivez-nous",
+    "whatIsConand": "Qu'est-ce que CONAND?",
+    "conandDescription": "CONAND (Conference Andorra) est la conférence technologique d'Andorre, organisée par et pour la communauté. Nous réunissons professionnels, étudiants et passionnés du secteur lors de meetups, ateliers et une grande conférence annuelle pour partager les connaissances, créer des connexions et dynamiser l'écosystème tech local.",
+    "gdgTitle": "Google Developer Group Andorra",
+    "gdgDescription": "CONAND est le Google Developer Group (GDG) officiel d'Andorre. Les GDG sont des communautés locales de développeurs qui se réunissent pour apprendre, partager et grandir ensemble avec les technologies Google et au-delà. Rejoignez notre communauté!"
+  },
+  "countdown": {
+    "days": "Jours",
+    "hours": "Heures",
+    "minutes": "Minutes",
+    "seconds": "Secondes",
+    "untilNextEvent": "Jusqu'au prochain événement"
+  },
+  "event": {
+    "upcomingEvent": "Prochain Événement",
+    "pastEvent": "Événement Passé",
+    "speakers": "Conférenciers",
+    "schedule": "Programme",
+    "tracks": "Salles",
+    "day": "Jour",
+    "noSpeakers": "Les conférenciers seront annoncés prochainement.",
+    "noSchedule": "Le programme sera disponible prochainement.",
+    "sponsorsTitle": "Sponsors de l'Événement",
+    "back": "Accueil"
+  },
+  "tier": {
+    "platinum": "Sponsor Platine",
+    "gold": "Sponsors Or",
+    "silver": "Sponsors Argent",
+    "bronze": "Sponsors Bronze",
+    "collaborator": "Collaborateurs"
+  },
+  "notFound": {
+    "title": "Page non trouvée",
+    "back": "Retour à l'accueil"
+  }
+}

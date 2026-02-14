@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Home",
+    "events": "Events",
+    "about": "About Us",
+    "contact": "Contact",
+    "faq": "FAQ"
+  },
+  "buttons": {
+    "callForSpeakers": "Call for Speakers",
+    "register": "Register",
+    "callForPapers": "Call for Papers",
+    "tickets": "Tickets",
+    "learnMore": "Learn More"
+  },
+  "home": {
+    "saveTheDate": "Save the Date!",
+    "nextEvent": "Next Event",
+    "aboutTitle": "About CONAND",
+    "contactTitle": "Contact Us",
+    "contactText": "Have questions or need more information? Don't hesitate to contact us!",
+    "sponsorsTitle": "Our Sponsors",
+    "followUs": "Follow Us",
+    "whatIsConand": "What is CONAND?",
+    "conandDescription": "CONAND (Conference Andorra) is Andorra's tech conference, organized by the community, for the community. We bring together professionals, students and tech enthusiasts through meetups, workshops and an annual conference to share knowledge, build connections and boost the local tech ecosystem.",
+    "gdgTitle": "Google Developer Group Andorra",
+    "gdgDescription": "CONAND is the official Google Developer Group (GDG) of Andorra. GDGs are local developer communities that meet to learn, share and grow together with Google technologies and beyond. Join our community!"
+  },
+  "countdown": {
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "untilNextEvent": "Until next event"
+  },
+  "event": {
+    "upcomingEvent": "Upcoming Event",
+    "pastEvent": "Past Event",
+    "speakers": "Speakers",
+    "schedule": "Schedule",
+    "tracks": "Tracks",
+    "day": "Day",
+    "noSpeakers": "Speakers will be announced soon.",
+    "noSchedule": "Schedule will be available soon.",
+    "sponsorsTitle": "Event Sponsors",
+    "back": "Home"
+  },
+  "tier": {
+    "platinum": "Platinum Sponsor",
+    "gold": "Gold Sponsors",
+    "silver": "Silver Sponsors",
+    "bronze": "Bronze Sponsors",
+    "collaborator": "Collaborators"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "back": "Back to home"
+  }
+}

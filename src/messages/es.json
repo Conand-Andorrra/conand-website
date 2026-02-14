@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "events": "Eventos",
+    "about": "Sobre Nosotros",
+    "contact": "Contacto",
+    "faq": "Preguntas Frecuentes"
+  },
+  "buttons": {
+    "callForSpeakers": "Convocatoria de Ponentes",
+    "register": "Registrarse",
+    "callForPapers": "Convocatoria de Ponencias",
+    "tickets": "Entradas",
+    "learnMore": "Saber Más"
+  },
+  "home": {
+    "saveTheDate": "¡Reserva la Fecha!",
+    "nextEvent": "Próximo Evento",
+    "aboutTitle": "Sobre CONAND",
+    "contactTitle": "Contáctanos",
+    "contactText": "¿Tienes preguntas o necesitas más información? ¡No dudes en contactarnos!",
+    "sponsorsTitle": "Nuestros Patrocinadores",
+    "followUs": "Síguenos",
+    "whatIsConand": "¿Qué es CONAND?",
+    "conandDescription": "CONAND (Conference Andorra) es la conferencia tecnológica de Andorra, organizada por y para la comunidad. Reunimos a profesionales, estudiantes y entusiastas del sector en meetups, talleres y una gran conferencia anual para compartir conocimiento, crear conexiones e impulsar el ecosistema tech local.",
+    "gdgTitle": "Google Developer Group Andorra",
+    "gdgDescription": "CONAND es el Google Developer Group (GDG) oficial de Andorra. Los GDG son comunidades locales de desarrolladores que se reúnen para aprender, compartir y crecer juntos con tecnologías de Google y más allá. ¡Forma parte de nuestra comunidad!"
+  },
+  "countdown": {
+    "days": "Días",
+    "hours": "Horas",
+    "minutes": "Minutos",
+    "seconds": "Segundos",
+    "untilNextEvent": "Hasta el próximo evento"
+  },
+  "event": {
+    "upcomingEvent": "Próximo Evento",
+    "pastEvent": "Evento Pasado",
+    "speakers": "Ponentes",
+    "schedule": "Programa",
+    "tracks": "Salas",
+    "day": "Día",
+    "noSpeakers": "Los ponentes serán anunciados próximamente.",
+    "noSchedule": "El programa estará disponible próximamente.",
+    "sponsorsTitle": "Patrocinadores del Evento",
+    "back": "Inicio"
+  },
+  "tier": {
+    "platinum": "Patrocinador Platino",
+    "gold": "Patrocinadores Oro",
+    "silver": "Patrocinadores Plata",
+    "bronze": "Patrocinadores Bronce",
+    "collaborator": "Colaboradores"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "back": "Volver al inicio"
+  }
+}

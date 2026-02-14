@@ -1,0 +1,129 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Colors - Modern dark palette */
+  --color-dark: #0b1120;
+  --color-dark-blue: #0f1a2e;
+  --color-navy: #162032;
+  --color-slate: #1e293b;
+  --color-turquoise: #22d3ee;
+  --color-teal: #14b8a6;
+  --color-orange: #f59e0b;
+  --color-amber: #fbbf24;
+  --color-beige: #f1f5f9;
+  --color-muted: #94a3b8;
+  --color-glass: rgba(15, 26, 46, 0.6);
+  --color-glass-light: rgba(255, 255, 255, 0.05);
+
+  /* Font families */
+  --font-teko: 'Teko', sans-serif;
+  --font-karla: 'Karla', sans-serif;
+
+  /* Container */
+  --container-max-width: 1280px;
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.6s ease-out forwards;
+  --animate-slide-up: slide-up 0.6s ease-out forwards;
+  --animate-glow: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+  from { opacity: 0.4; }
+  to { opacity: 0.7; }
+}
+
+/* Global base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-dark);
+  color: var(--color-beige);
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-turquoise), var(--color-teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-warm {
+  background: linear-gradient(135deg, var(--color-orange), var(--color-amber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass card */
+.glass {
+  background: rgba(15, 26, 46, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Glow border on hover */
+.glow-border {
+  position: relative;
+}
+.glow-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--color-turquoise), var(--color-orange));
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: -1;
+}
+.glow-border:hover::before {
+  opacity: 1;
+}
+
+/* Dot grid pattern */
+.dot-pattern {
+  background-image: radial-gradient(rgba(34, 211, 238, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Section divider gradient */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.3), transparent);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}

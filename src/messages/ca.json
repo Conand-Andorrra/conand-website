@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Inici",
+    "events": "Esdeveniments",
+    "about": "Sobre Nosaltres",
+    "contact": "Contacte",
+    "faq": "Preguntes Freqüents"
+  },
+  "buttons": {
+    "callForSpeakers": "Crida a Ponents",
+    "register": "Registrar-se",
+    "callForPapers": "Crida a Ponències",
+    "tickets": "Entrades",
+    "learnMore": "Saber-ne Més"
+  },
+  "home": {
+    "saveTheDate": "Reserva la Data!",
+    "nextEvent": "Proper Esdeveniment",
+    "aboutTitle": "Sobre CONAND",
+    "contactTitle": "Contacta'ns",
+    "contactText": "Tens preguntes o necessites més informació? No dubtis en contactar-nos!",
+    "sponsorsTitle": "Els Nostres Patrocinadors",
+    "followUs": "Segueix-nos",
+    "whatIsConand": "Què és CONAND?",
+    "conandDescription": "CONAND (Conference Andorra) és la conferència tecnològica d'Andorra, organitzada per i per a la comunitat. Reunim professionals, estudiants i entusiastes del sector en meetups, tallers i una gran conferència anual per compartir coneixement, crear connexions i impulsar l'ecosistema tech local.",
+    "gdgTitle": "Google Developer Group Andorra",
+    "gdgDescription": "CONAND és el Google Developer Group (GDG) oficial d'Andorra. Els GDG són comunitats locals de desenvolupadors que es reuneixen per aprendre, compartir i créixer junts amb tecnologies de Google i més enllà. Forma part de la nostra comunitat!"
+  },
+  "countdown": {
+    "days": "Dies",
+    "hours": "Hores",
+    "minutes": "Minuts",
+    "seconds": "Segons",
+    "untilNextEvent": "Fins al proper esdeveniment"
+  },
+  "event": {
+    "upcomingEvent": "Proper Esdeveniment",
+    "pastEvent": "Esdeveniment Passat",
+    "speakers": "Ponents",
+    "schedule": "Programa",
+    "tracks": "Sales",
+    "day": "Dia",
+    "noSpeakers": "Els ponents s'anunciaran aviat.",
+    "noSchedule": "El programa estarà disponible aviat.",
+    "sponsorsTitle": "Patrocinadors de l'Esdeveniment",
+    "back": "Inici"
+  },
+  "tier": {
+    "platinum": "Patrocinador Platí",
+    "gold": "Patrocinadors Or",
+    "silver": "Patrocinadors Plata",
+    "bronze": "Patrocinadors Bronze",
+    "collaborator": "Col·laboradors"
+  },
+  "notFound": {
+    "title": "Pàgina no trobada",
+    "back": "Tornar a l'inici"
+  }
+}

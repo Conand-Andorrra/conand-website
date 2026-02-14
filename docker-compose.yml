@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PAYLOAD_SECRET=${PAYLOAD_SECRET}
+      - DATABASE_URI=file:/app/data/db.sqlite
+    volumes:
+      - conand-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  conand-data:
