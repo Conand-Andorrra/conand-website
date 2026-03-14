@@ -101,10 +101,16 @@ export interface Config {
   globals: {
     'site-settings': SiteSetting;
     translations: Translation;
+    home: Home;
+    about: About;
+    contact: Contact;
   };
   globalsSelect: {
     'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
     translations: TranslationsSelect<false> | TranslationsSelect<true>;
+    home: HomeSelect<false> | HomeSelect<true>;
+    about: AboutSelect<false> | AboutSelect<true>;
+    contact: ContactSelect<false> | ContactSelect<true>;
   };
   locale: 'ca' | 'es' | 'en' | 'fr';
   user: User;
@@ -740,6 +746,46 @@ export interface Translation {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "home".
+ */
+export interface Home {
+  id: number;
+  title_h1?: string | null;
+  media?: (number | null) | Media;
+  button_text?: string | null;
+  button_link?: string | null;
+  button_variant?: ('primary' | 'secondary') | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "about".
+ */
+export interface About {
+  id: number;
+  title?: string | null;
+  description?: string | null;
+  button_text?: string | null;
+  button_link?: string | null;
+  button_variant?: ('primary' | 'secondary') | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact".
+ */
+export interface Contact {
+  id: number;
+  title?: string | null;
+  description?: string | null;
+  email?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "site-settings_select".
  */
 export interface SiteSettingsSelect<T extends boolean = true> {
@@ -851,6 +897,46 @@ export interface TranslationsSelect<T extends boolean = true> {
         noSchedule?: T;
         sponsorsTitle?: T;
       };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "home_select".
+ */
+export interface HomeSelect<T extends boolean = true> {
+  title_h1?: T;
+  media?: T;
+  button_text?: T;
+  button_link?: T;
+  button_variant?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "about_select".
+ */
+export interface AboutSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  button_text?: T;
+  button_link?: T;
+  button_variant?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact_select".
+ */
+export interface ContactSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  email?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
