@@ -12,6 +12,9 @@ import { Sponsors } from './collections/Sponsors'
 import { Events } from './collections/Events'
 import { SiteSettings } from './globals/SiteSettings'
 import { Translations } from './globals/Translations'
+import { Home } from './globals/Home'
+import { About } from './globals/About'
+import { Contact } from './globals/Contact'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -27,7 +30,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, Speakers, Sponsors, Events],
-  globals: [SiteSettings, Translations],
+  globals: [SiteSettings, Translations, Home, About, Contact],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || 'default-secret-change-me',
   typescript: {
