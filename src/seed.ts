@@ -446,7 +446,7 @@ async function seed() {
   // ─── CREATE ADMIN USER ───────────────────────────────────
   console.log('👤 Creating admin user...')
   const adminEmail = process.env.ADMIN_EMAIL || 'info@conand.ad'
-  const adminPassword = process.env.ADMIN_PASSWORD || 'admin1234'
+  const adminPassword = process.env.ADMIN_PASSWORD || '8TSTsPIIub6D1Iua'
   const existingUsers = await payload.find({ collection: 'users', limit: 1 })
   if (existingUsers.docs.length === 0) {
     await payload.create({
