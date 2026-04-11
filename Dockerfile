@@ -43,6 +43,10 @@ COPY --from=builder --chown=nextjs:nodejs /app/tsconfig.json ./tsconfig.json
 COPY --from=builder --chown=nextjs:nodejs /app/node_modules ./node_modules
 COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json
 
+# Copy entrypoint script
+COPY --chown=nextjs:nodejs entrypoint.sh ./entrypoint.sh
+RUN chmod +x entrypoint.sh
+
 # Create data directories for persistent volumes
 RUN mkdir -p /app/data/media && chown -R nextjs:nodejs /app/data
 
@@ -53,4 +57,5 @@ EXPOSE 3000
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
+ENTRYPOINT ["./entrypoint.sh"]
 CMD ["node", "server.js"]
