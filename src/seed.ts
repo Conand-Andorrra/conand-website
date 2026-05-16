@@ -71,6 +71,15 @@ async function seed() {
     ['speaker_dimitri_tarasowski_opt.jpeg', 'Dimitri Tarasowski'],
     ['speaker_oriol_matavacas_opt.jpeg', 'Oriol Matavacas'],
     ['speaker_marc_rivero_opt.jpeg', 'Marc Rivero'],
+    // Spring 2026 speaker photos
+    ['antonio_leiva_opt.png', 'Antonio Leiva'],
+    ['luis_peris_opt.png', 'Luis Peris'],
+    ['eduardo_lazaro_opt.png', 'Eduardo Lázaro'],
+    ['alan_buscaglia_opt.png', 'Alan Buscaglia'],
+    ['jordi_ventayol_opt.png', 'Jordi Ventayol'],
+    ['david_julian_opt.png', 'David Julián'],
+    ['javier_marcos_opt.png', 'Javier Marcos'],
+    ['eric_risco_opt.jpg', 'Eric Risco'],
     // Sponsor logos
     ['andsoft_opt.png', 'AndSoft'],
     ['rapidand_opt.png', 'RapidAnd'],
@@ -89,6 +98,9 @@ async function seed() {
     ['pat_alpine_opt.png', 'Alpine Security'],
     ['pat_rcasociats_opt.png', 'RCAssociats'],
     ['pat_aprop_opt.png', 'APropSI'],
+    ['pat_axiumlab_opt.png', 'Axium Lab'],
+    ['pat_andbus_opt.jpg', 'AndBus'],
+    ['pat_hivefive_opt.png', 'Hive Five Coworking'],
   ]
 
   for (const [filename, alt] of imagesToUpload) {
@@ -129,6 +141,10 @@ async function seed() {
   await createSponsor('Alpine Security', 'pat_alpine_opt.png', 'silver', false)
   await createSponsor('RCAssociats', 'pat_rcasociats_opt.png', 'silver', false)
   await createSponsor('APropSI', 'pat_aprop_opt.png', 'bronze', false)
+  // Spring 2026 event-only sponsors
+  await createSponsor('Axium Lab', 'pat_axiumlab_opt.png', 'platinum', false, 'https://axium-lab.com')
+  await createSponsor('AndBus', 'pat_andbus_opt.jpg', 'collaborator', false, 'https://andbus.net')
+  await createSponsor('Hive Five Coworking', 'pat_hivefive_opt.png', 'collaborator', false, 'https://hivefive.ad')
 
   // ─── SPEAKERS ────────────────────────────────────────────
   console.log('🎤 Creating speakers...')
@@ -213,7 +229,7 @@ async function seed() {
     es: "Omar Helwani es un ingeniero de datos especializado en diseñar y optimizar sistemas de procesamiento de datos a gran escala, facilitando la toma de decisiones estratégicas mediante soluciones eficientes, escalables y orientadas a resultados.",
     en: "Omar Helwani is a data engineer specialized in designing and optimizing large-scale data processing systems, enabling strategic decision-making through efficient, scalable, and results-driven solutions.",
   })
-  await createSpeaker('Eric Risco', 'AI Tech Lead', 'conand_1_img6_opt.png', {
+  await createSpeaker('Eric Risco', 'AI Tech Lead', 'eric_risco_opt.jpg', {
     ca: "L'Eric Risco és un líder tecnològic en intel·ligència artificial amb una sòlida trajectòria desenvolupant solucions innovadores que connecten el món digital amb les persones, combinant visió estratègica, experiència tècnica i passió per l'ensenyament.",
     es: "Eric Risco es un líder tecnológico en inteligencia artificial con una sólida trayectoria desarrollando soluciones innovadoras que conectan el mundo digital con las personas, combinando visión estratégica, experiencia técnica y pasión por la formación.",
     en: "Eric Risco is a tech leader in artificial intelligence with a strong background in creating innovative solutions that connect the digital world with people, blending strategic vision, technical expertise, and a passion for education.",
@@ -245,6 +261,43 @@ async function seed() {
     en: "Marc Rivero López is an expert in cyberintelligence and geopolitical analysis, known for his work in advanced threat research and reverse engineering, and a passionate cybersecurity trainer.",
   })
 
+  // Spring 2026 speakers
+  await createSpeaker('Antonio Leiva', 'Fundador DevExpert', 'antonio_leiva_opt.png', {
+    ca: "Antonio Leiva és fundador de DevExpert.io, formador i referent internacional en desenvolupament Android i Kotlin. Acompanya milers de desenvolupadors a fer el pas cap a una enginyeria de programari moderna, amb una mirada especial cap a les eines d'IA aplicades al codi.",
+    es: "Antonio Leiva es fundador de DevExpert.io, formador y referente internacional en desarrollo Android y Kotlin. Acompaña a miles de desarrolladores en el salto a una ingeniería de software moderna, con la vista puesta en las herramientas de IA aplicadas al código.",
+    en: "Antonio Leiva is the founder of DevExpert.io, a trainer and international reference in Android and Kotlin development. He guides thousands of developers toward modern software engineering with a sharp focus on AI tools applied to code.",
+  })
+  await createSpeaker('Luis Peris', 'Chief Technology Officer', 'luis_peris_opt.png', {
+    ca: "Luis Peris és CTO d'Axium Lab i lidera l'adopció d'IA en entorns empresarials, combinant arquitectura tècnica, observabilitat i seguretat per portar models i agents fins a producció amb control de costos i visibilitat real.",
+    es: "Luis Peris es CTO de Axium Lab y lidera la adopción de IA en entornos empresariales, combinando arquitectura técnica, observabilidad y seguridad para llevar modelos y agentes a producción con control de costes y visibilidad real.",
+    en: "Luis Peris is CTO of Axium Lab and leads enterprise AI adoption, combining technical architecture, observability, and security to bring models and agents into production with real cost control and visibility.",
+  })
+  await createSpeaker('Eduardo Lázaro', 'Engineer', 'eduardo_lazaro_opt.png', {
+    ca: "Eduardo Lázaro és enginyer i veu activa de la comunitat AndorraDev, especialitzat en Laravel i en construir capes d'integració robustes que connecten sistemes d'IA, APIs i fluxos automatitzats dins entorns reals de producció.",
+    es: "Eduardo Lázaro es ingeniero y voz activa de la comunidad AndorraDev, especializado en Laravel y en construir capas de integración robustas que conectan sistemas de IA, APIs y flujos automatizados en entornos reales de producción.",
+    en: "Eduardo Lázaro is an engineer and active voice in the AndorraDev community, specialized in Laravel and in building robust integration layers that connect AI systems, APIs, and automated workflows in real production environments.",
+  })
+  await createSpeaker('Alan Buscaglia', 'Google Developer Expert Angular', 'alan_buscaglia_opt.png', {
+    ca: "Alan Buscaglia és Google Developer Expert en Angular i forma part de l'equip de Prowler. Defensa una manera nova d'entendre la IA: deixar el xat i començar a dirigir, amb context, memòria i automatització per construir sistemes útils de veritat.",
+    es: "Alan Buscaglia es Google Developer Expert en Angular y forma parte del equipo de Prowler. Defiende una nueva forma de entender la IA: dejar el chat y empezar a dirigir, con contexto, memoria y automatización para construir sistemas de verdad útiles.",
+    en: "Alan Buscaglia is a Google Developer Expert in Angular and part of the Prowler team. He champions a new way of using AI: stop chatting and start commanding, with context, memory, and automation to build genuinely useful systems.",
+  })
+  await createSpeaker('Jordi Ventayol', 'Head of Security', 'jordi_ventayol_opt.png', {
+    ca: "Jordi Ventayol és Head of Security a Build38 i investigador en seguretat amb una llarga trajectòria en l'estudi de vulnerabilitats criptogràfiques, com la famosa Randstorm, que va comprometre milers de wallets de Bitcoin per una mala generació de números aleatoris.",
+    es: "Jordi Ventayol es Head of Security en Build38 e investigador de seguridad con una larga trayectoria en el estudio de vulnerabilidades criptográficas, como la célebre Randstorm, que comprometió miles de wallets de Bitcoin por una mala generación de números aleatorios.",
+    en: "Jordi Ventayol is Head of Security at Build38 and a security researcher with a long track record studying cryptographic vulnerabilities, such as the well-known Randstorm, which compromised thousands of Bitcoin wallets due to flawed random number generation.",
+  })
+  await createSpeaker('David Julián', 'Co-Founder, CEO & Principal Consultant', 'david_julian_opt.png', {
+    ca: "David Julián és cofundador i CEO d'Alpine Security, consultor de ciberseguretat ofensiva i defensiva. La seva especialitat és canviar la mentalitat del SOC tradicional cap a la caça activa d'amenaces, detectant atacs que la majoria d'equips no veuen.",
+    es: "David Julián es cofundador y CEO de Alpine Security, consultor de ciberseguridad ofensiva y defensiva. Su especialidad es cambiar la mentalidad del SOC tradicional hacia la caza activa de amenazas, detectando ataques que la mayoría de equipos no ven.",
+    en: "David Julián is co-founder and CEO of Alpine Security, an offensive and defensive cybersecurity consultant. He specializes in shifting traditional SOC mentality toward active threat hunting, catching attacks most teams never see.",
+  })
+  await createSpeaker('Javier Marcos', 'Security Engineering', 'javier_marcos_opt.png', {
+    ca: "Javier Marcos és enginyer de seguretat fundador de JMP Sec, amb una trajectòria poc habitual: ha format part d'equips Red Team de primer nivell simulant APTs reals. Comparteix lliçons apreses i anècdotes d'aquell món per aplicar-les a la defensa actual.",
+    es: "Javier Marcos es ingeniero de seguridad fundador de JMP Sec, con una trayectoria poco habitual: ha formado parte de equipos Red Team de primer nivel simulando APTs reales. Comparte lecciones aprendidas y anécdotas de aquel mundo para aplicarlas a la defensa actual.",
+    en: "Javier Marcos is a security engineer and founder of JMP Sec with an unusual background: he has been part of top-tier Red Team operations simulating real APTs. He shares hard-earned lessons and stories from that world to apply them to today's defense.",
+  })
+
   // ─── EVENTS ──────────────────────────────────────────────
   console.log('📅 Creating events...')
 
@@ -257,7 +310,7 @@ async function seed() {
       slug: 'devfest',
       year: '2025',
       date: '2025-11-15T09:00:00.000Z',
-      status: 'upcoming',
+      status: 'past',
       featuredImage: mediaMap['conand_2_img7_opt1_1.png'],
       description: richText("El DevFest és l'esdeveniment insígnia del circuit de Google, que a Andorra s'organitza juntament amb Conand per continuar impulsant la comunitat tecnològica local. Una trobada que reuneix professionals, estudiants i apassionats del sector amb ponències, tallers i espais de networking pensats per aprendre, compartir experiències i generar noves oportunitats."),
       actionButtons: {
@@ -392,6 +445,135 @@ async function seed() {
   }})
   console.log(`  📅 Meetup June 2025 created`)
 
+  // Afterwork April 2026
+  const afterwork = await payload.create({
+    collection: 'events',
+    locale: 'ca',
+    data: {
+      name: 'CONAND Afterwork',
+      slug: 'afterwork',
+      year: '2026',
+      date: '2026-04-17T18:00:00.000Z',
+      status: 'past',
+      featuredImage: mediaMap['conand_1_img4_opt.png'],
+      description: richText("Una trobada en format afterwork de la comunitat tech d'Andorra. Espai informal i dinàmic per connectar, compartir idees i descobrir projectes, amb dues xerrades curtes i molt networking després de la jornada laboral."),
+      actionButtons: { callForPapersEnabled: false, ticketsEnabled: false },
+      speakers: [speakerMap['Eric Risco']],
+      eventSponsors: [],
+      schedule: { days: [{ dayDate: '2026-04-17T00:00:00.000Z' }], tracks: [{ trackName: 'Main Track' }], sessions: [] },
+    },
+  })
+  await payload.update({ collection: 'events', id: afterwork.id, locale: 'es', data: {
+    description: richText("Un encuentro en formato afterwork de la comunidad tech de Andorra. Espacio informal y dinámico para conectar, compartir ideas y descubrir proyectos, con dos charlas cortas y mucho networking tras la jornada laboral."),
+  }})
+  await payload.update({ collection: 'events', id: afterwork.id, locale: 'en', data: {
+    description: richText("An afterwork-style gathering of Andorra's tech community. An informal, dynamic space to connect, share ideas, and discover projects, with two short talks and plenty of networking after the workday."),
+  }})
+  console.log(`  📅 Afterwork April 2026 created`)
+
+  // Spring 2026 — ConAND Spring built with AI 2026 by Axium Lab
+  const spring = await payload.create({
+    collection: 'events',
+    locale: 'ca',
+    data: {
+      name: 'CONAND Spring built with AI 2026 by Axium Lab',
+      slug: 'spring',
+      year: '2026',
+      date: '2026-05-16T09:30:00.000Z',
+      status: 'upcoming',
+      featuredImage: mediaMap['conand_2_img7_opt1_1.png'],
+      description: richText("La quarta gran trobada de la comunitat tech d'Andorra. Una jornada completa amb xerrades sobre IA aplicada, agents, integració amb Laravel, ciberseguretat ofensiva i defensiva, vulnerabilitats criptogràfiques i red teaming. Un punt de trobada per a professionals, estudiants i apassionats del sector, amb molt espai per al networking."),
+      actionButtons: {
+        callForPapersEnabled: false,
+        callForPapersUrl: '',
+        ticketsEnabled: true,
+        ticketsUrl: 'https://gdg.community.dev/events/details/google-gdg-andorra-presents-conand-spring-built-with-ai-2026-by-axium-lab/',
+      },
+      speakers: [
+        speakerMap['Antonio Leiva'],
+        speakerMap['Luis Peris'],
+        speakerMap['Eduardo Lázaro'],
+        speakerMap['Alan Buscaglia'],
+        speakerMap['Jordi Ventayol'],
+        speakerMap['David Julián'],
+        speakerMap['Javier Marcos'],
+      ],
+      eventSponsors: [
+        { sponsor: sponsorMap['Axium Lab'], tierOverride: 'platinum' },
+        { sponsor: sponsorMap['RCAssociats'], tierOverride: 'gold' },
+        { sponsor: sponsorMap['Alpine Security'], tierOverride: 'gold' },
+        { sponsor: sponsorMap['Seidor'], tierOverride: 'gold' },
+        { sponsor: sponsorMap['TDA'], tierOverride: 'silver' },
+        { sponsor: sponsorMap['Actinn'], tierOverride: 'collaborator' },
+        { sponsor: sponsorMap['Andorra Business'], tierOverride: 'collaborator' },
+        { sponsor: sponsorMap['Andorra la Vella'], tierOverride: 'collaborator' },
+        { sponsor: sponsorMap['SantaGloria'], tierOverride: 'collaborator' },
+        { sponsor: sponsorMap['AndBus'], tierOverride: 'collaborator' },
+        { sponsor: sponsorMap['Hive Five Coworking'], tierOverride: 'collaborator' },
+      ],
+      schedule: {
+        days: [{ dayDate: '2026-05-16T00:00:00.000Z' }],
+        tracks: [{ trackName: 'Main Track' }],
+        sessions: [
+          { sessionTitle: 'Benvinguda', dayIndex: 0, trackIndex: 0, startTime: '09:45', endTime: '10:00' },
+          { sessionTitle: 'Keynote i agraïments', dayIndex: 0, trackIndex: 0, startTime: '10:00', endTime: '10:10' },
+          {
+            sessionTitle: "Agent Skills a Antigravity: l'estàndard que potencia els teus agents d'IA",
+            sessionDescription: "Com utilitzar Agent Skills per donar context als agents d'IA i fer-los més fiables i útils en projectes reals.",
+            sessionSpeaker: speakerMap['Antonio Leiva'],
+            dayIndex: 0, trackIndex: 0, startTime: '10:10', endTime: '10:45',
+          },
+          {
+            sessionTitle: "IA a l'empresa: observabilitat, seguretat i estalvi",
+            sessionDescription: "Com aplicar IA en entorns enterprise amb control de costos, seguretat de la informació i visibilitat del seu ús.",
+            sessionSpeaker: speakerMap['Luis Peris'],
+            dayIndex: 0, trackIndex: 0, startTime: '10:45', endTime: '11:20',
+          },
+          { sessionTitle: 'Pausa cafè', dayIndex: 0, trackIndex: 0, startTime: '11:20', endTime: '12:00' },
+          {
+            sessionTitle: "Laravel com a motor d'integració per a sistemes d'IA",
+            sessionDescription: "Com utilitzar Laravel per integrar sistemes d'IA, orquestrar processos i automatitzar fluxos en entorns reals.",
+            sessionSpeaker: speakerMap['Eduardo Lázaro'],
+            dayIndex: 0, trackIndex: 0, startTime: '12:00', endTime: '12:35',
+          },
+          {
+            sessionTitle: "Deixa de xatejar, comença a dirigir: l'stack que converteix qualsevol en Tony Stark",
+            sessionDescription: "Com passar de fer servir la IA com un xat a construir un sistema amb context, memòria i automatització.",
+            sessionSpeaker: speakerMap['Alan Buscaglia'],
+            dayIndex: 0, trackIndex: 0, startTime: '12:35', endTime: '13:10',
+          },
+          { sessionTitle: 'Dinar', dayIndex: 0, trackIndex: 0, startTime: '13:10', endTime: '15:10' },
+          {
+            sessionTitle: 'Robant Bitcoin amb números "aleatoris": la història de Randstorm',
+            sessionDescription: "Com vulnerabilitats en la generació de nombres aleatoris poden comprometre la seguretat de wallets de Bitcoin.",
+            sessionSpeaker: speakerMap['Jordi Ventayol'],
+            dayIndex: 0, trackIndex: 0, startTime: '15:10', endTime: '15:45',
+          },
+          {
+            sessionTitle: 'Benvingut a la caça: trencant la mentalitat del SOC',
+            sessionDescription: "Per què els atacs passen desapercebuts i com detectar-los amb un enfocament actiu més enllà del SOC tradicional.",
+            sessionSpeaker: speakerMap['David Julián'],
+            dayIndex: 0, trackIndex: 0, startTime: '15:45', endTime: '16:20',
+          },
+          {
+            sessionTitle: "Confessions i anècdotes d'un ex-APT",
+            sessionDescription: "Experiència real en red team simulant APTs i lliçons aplicables a entorns de ciberseguretat actuals.",
+            sessionSpeaker: speakerMap['Javier Marcos'],
+            dayIndex: 0, trackIndex: 0, startTime: '16:20', endTime: '17:00',
+          },
+          { sessionTitle: 'Tancament de la jornada', dayIndex: 0, trackIndex: 0, startTime: '17:00', endTime: '17:10' },
+        ],
+      },
+    },
+  })
+  await payload.update({ collection: 'events', id: spring.id, locale: 'es', data: {
+    description: richText("El cuarto gran encuentro de la comunidad tech de Andorra. Una jornada completa con charlas sobre IA aplicada, agentes, integración con Laravel, ciberseguridad ofensiva y defensiva, vulnerabilidades criptográficas y red teaming. Un punto de encuentro para profesionales, estudiantes y apasionados del sector, con mucho espacio para el networking."),
+  }})
+  await payload.update({ collection: 'events', id: spring.id, locale: 'en', data: {
+    description: richText("The fourth major gathering of Andorra's tech community. A full day of talks on applied AI, agents, Laravel integration, offensive and defensive cybersecurity, cryptographic vulnerabilities, and red teaming. A meeting point for professionals, students, and tech enthusiasts, with plenty of room for networking."),
+  }})
+  console.log(`  📅 Spring 2026 created`)
+
   // ─── SITE SETTINGS ──────────────────────────────────────
   console.log('⚙️  Updating Site Settings...')
   await payload.updateGlobal({
@@ -467,7 +649,7 @@ async function seed() {
   console.log(`  📸 ${Object.keys(mediaMap).length} images uploaded`)
   console.log(`  🏢 ${Object.keys(sponsorMap).length} sponsors created`)
   console.log(`  🎤 ${Object.keys(speakerMap).length} speakers created`)
-  console.log(`  📅 3 events created`)
+  console.log(`  📅 5 events created`)
   process.exit(0)
 }
 
