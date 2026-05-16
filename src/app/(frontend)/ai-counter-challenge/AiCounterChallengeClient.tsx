@@ -3,8 +3,8 @@
 import { useCallback, useEffect, useState } from 'react'
 import { onAuthStateChanged, signInWithPopup, signOut, type User } from 'firebase/auth'
 import { getFirebaseAuth, GoogleAuthProvider } from '@/lib/firebase'
-import { getMyGuess, insertMyGuess } from '@/lib/ai-counter-store'
-import { LogOut, Check, AlertCircle, Loader2, Clock, Lock } from 'lucide-react'
+import { getMyGuess, insertMyGuess, deleteMyGuess } from '@/lib/ai-counter-store'
+import { LogOut, Check, AlertCircle, Loader2, Clock, Lock, RotateCcw } from 'lucide-react'
 
 function GoogleLogo({ className }: { className?: string }) {
   return (
@@ -82,6 +82,12 @@ export function AiCounterChallengeClient({
   const [totalGuess, setTotalGuess] = useState<string>('')
   const [perTalk, setPerTalk] = useState<Record<string, string>>({})
   const [hasExistingGuess, setHasExistingGuess] = useState(false)
+  const [resetting, setResetting] = useState(false)
+  // Reset escape hatch — only shown when the URL has ?reset=1. Used to clear
+  // stranded test data after schema/id changes; not part of the normal flow.
+  const allowReset =
+    typeof window !== 'undefined' &&
+    new URLSearchParams(window.location.search).get('reset') === '1'
   const [status, setStatus] = useState<Status>('idle')
 
   // Re-check deadline client-side too — server is rendered statically so its
@@ -141,6 +147,28 @@ export function AiCounterChallengeClient({
   const handleSignOut = useCallback(async () => {
     await signOut(getFirebaseAuth())
   }, [])
+
+  const handleReset = useCallback(async () => {
+    if (!user) return
+    if (!confirm('Reset your guess for this event? This cannot be undone.')) return
+    setResetting(true)
+    try {
+      await deleteMyGuess(eventId)
+      setTotalGuess('')
+      setPerTalk({})
+      setHasExistingGuess(false)
+      setStatus('idle')
+      // Strip ?reset=1 from the URL so the button disappears.
+      const u = new URL(window.location.href)
+      u.searchParams.delete('reset')
+      window.history.replaceState(null, '', u.toString())
+    } catch (err) {
+      console.error('Reset failed', err)
+      alert('Reset failed. See console for details.')
+    } finally {
+      setResetting(false)
+    }
+  }, [user, eventId])
 
   const handleSubmit = useCallback(
     async (e: React.FormEvent) => {
@@ -255,7 +283,24 @@ export function AiCounterChallengeClient({
       {hasExistingGuess && (
         <div className="mb-8 flex items-start gap-3 rounded-xl border border-turquoise/30 bg-turquoise/5 p-4">
           <Lock className="mt-0.5 h-5 w-5 flex-none text-turquoise" />
-          <p className="text-sm leading-relaxed text-beige/85">{t.alreadyGuessed}</p>
+          <div className="flex-1 text-sm leading-relaxed text-beige/85">
+            <p>{t.alreadyGuessed}</p>
+            {allowReset && (
+              <button
+                type="button"
+                onClick={handleReset}
+                disabled={resetting}
+                className="mt-3 inline-flex items-center gap-1.5 rounded-lg border border-red-400/40 bg-red-500/10 px-3 py-1.5 text-xs font-medium text-red-300 transition-all hover:bg-red-500/20 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {resetting ? (
+                  <Loader2 className="h-3 w-3 animate-spin" />
+                ) : (
+                  <RotateCcw className="h-3 w-3" />
+                )}
+                {resetting ? 'Resetting…' : 'Reset my guess (admin)'}
+              </button>
+            )}
+          </div>
         </div>
       )}
 

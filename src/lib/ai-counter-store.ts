@@ -61,3 +61,9 @@ export async function insertMyGuess(vars: UpsertVars): Promise<void> {
   const ref = mutationRef<unknown, UpsertVars>(dc, 'InsertMyGuess', vars)
   await executeMutation(ref)
 }
+
+export async function deleteMyGuess(eventId: string): Promise<void> {
+  const dc = getFirebaseDataConnect()
+  const ref = mutationRef<unknown, { eventId: string }>(dc, 'DeleteMyGuess', { eventId })
+  await executeMutation(ref)
+}

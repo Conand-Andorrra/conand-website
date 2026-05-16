@@ -23,6 +23,13 @@ mutation UpsertMyGuess(
   )
 }
 
+# Delete the current user's guess for a given event. userId is bound to
+# auth.uid so callers can only delete their own row. Intended for one-off
+# resets (e.g. stale per-talk keys after a schedule change).
+mutation DeleteMyGuess($eventId: String!) @auth(level: USER) {
+  guess_delete(key: { userId_expr: "auth.uid", eventId: $eventId })
+}
+
 # Insert a guess. userId is forced to auth.uid server-side so users cannot
 # write to other people's rows. We use insert (not upsert) so that once a
 # user has guessed, a second attempt fails on the (userId, eventId) primary
