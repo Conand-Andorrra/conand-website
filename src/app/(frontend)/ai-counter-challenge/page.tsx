@@ -41,8 +41,14 @@ export default async function AiCounterChallengePage() {
         const sp = speakersById.get(speakerRef)
         speakerName = sp?.name || null
       }
+      // Stable id based on schedule position + start time. Do NOT use s.id
+      // because the entrypoint re-seeds the database on every container start
+      // and Payload generates a fresh array-item id each time, so any value
+      // stored as perTalkGuesses[s.id] becomes orphaned on the next deploy.
+      // dayIndex+trackIndex+startTime is stable as long as the schedule
+      // structure is not edited.
       return {
-        id: String(s.id || `${s.dayIndex}-${s.trackIndex}-${s.startTime}`),
+        id: `d${s.dayIndex ?? 0}-t${s.trackIndex ?? 0}-${s.startTime || ''}`,
         title: s.sessionTitle || '',
         startTime: s.startTime || '',
         endTime: s.endTime || '',
