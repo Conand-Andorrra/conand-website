@@ -76,5 +76,38 @@
   "notFound": {
     "title": "Pàgina no trobada",
     "back": "Tornar a l'inici"
+  },
+  "aiChallenge": {
+    "kicker": "Repte CONAND",
+    "title": "AI Counter Challenge",
+    "subtitle": "Quantes vegades es dirà «AI», «IA» o «Intel·ligència Artificial» durant tot l'esdeveniment?",
+    "description": "Endevina el nombre total de mencions a «AI», «IA» o «Intel·ligència Artificial» al llarg de l'esdeveniment, i també el recompte per a cada xerrada. Tens **una sola oportunitat per usuari**: un cop enviada la teva estimació no la podràs modificar, així que pensa-t'ho bé! El termini per participar acaba a les 23:59 del dia de l'esdeveniment.",
+    "prizeNotice": "Hi ha un premi per a la persona que més s'aproximi al recompte real. Un cop nosaltres (o el nostre agent d'IA 🤖) hàgim fet el recompte definitiu, t'avisarem per correu electrònic si has guanyat.",
+    "rules": "Normes",
+    "rule1": "Compten les mencions parlades de «AI», «IA» o «Intel·ligència Artificial» (en qualsevol idioma).",
+    "rule2": "Cal iniciar sessió amb Google per participar.",
+    "rule3": "Una sola estimació per usuari. Un cop enviada, queda registrada i no es pot modificar.",
+    "rule4": "El guanyador es decideix per proximitat al recompte total real i s'avisa per correu.",
+    "deadline": "Data límit",
+    "challengeClosed": "El termini per a fer estimacions ja s'ha tancat. Aviat publicarem el recompte final i avisarem el guanyador.",
+    "signInTitle": "Inicia sessió per participar",
+    "signInDescription": "Necessitem identificar-te per registrar la teva estimació i contactar amb tu si guanyes.",
+    "signInGoogle": "Continua amb Google",
+    "signOut": "Tanca sessió",
+    "signedInAs": "Sessió iniciada com a",
+    "totalGuess": "Estimació total",
+    "totalGuessHelp": "Total de vegades que es dirà «AI», «IA» o «Intel·ligència Artificial» a tot l'esdeveniment",
+    "perTalkGuess": "Estimació per xerrada",
+    "perTalkHelp": "Quantes mencions a cada xerrada (opcional, però recomanat)",
+    "submit": "Envia la meva estimació",
+    "update": "Actualitza la meva estimació",
+    "saving": "Desant…",
+    "saved": "Estimació desada correctament.",
+    "errorSaving": "Hi ha hagut un error desant la teva estimació. Torna-ho a provar.",
+    "errorSignIn": "No s'ha pogut iniciar sessió. Torna-ho a provar.",
+    "yourGuess": "La teva estimació actual",
+    "alreadyGuessed": "Ja has fet la teva estimació. Queda registrada i no es pot modificar. Bona sort! 🎲",
+    "noActiveEvent": "Encara no hi ha cap esdeveniment actiu per al repte. Torna més tard!",
+    "loading": "Carregant…"
   }
 }

@@ -1,0 +1,15 @@
+# Get a user's own guess for an event.
+# userId is bound server-side to auth.uid so a user can only read their own row.
+query GetMyGuess($eventId: String!) @auth(level: USER) {
+  guess(key: { userId_expr: "auth.uid", eventId: $eventId }) {
+    userId
+    eventId
+    userName
+    userEmail
+    userPhotoURL
+    totalGuess
+    perTalkGuesses
+    createdAt
+    updatedAt
+  }
+}

@@ -76,5 +76,38 @@
   "notFound": {
     "title": "Page not found",
     "back": "Back to home"
+  },
+  "aiChallenge": {
+    "kicker": "CONAND Challenge",
+    "title": "AI Counter Challenge",
+    "subtitle": "How many times will \"AI\" or \"Artificial Intelligence\" be said during the whole event?",
+    "description": "Guess the total number of mentions of \"AI\", \"IA\" or \"Artificial Intelligence\" throughout the event, and also the count per talk. You only get **one shot per user**: once submitted, your guess is locked and cannot be changed — so think it through. The window to participate closes at 23:59 on the day of the event.",
+    "prizeNotice": "There is a prize for the person who gets closest to the real count. Once we (or our AI agent 🤖) have done the final count, we'll email you if you've won.",
+    "rules": "Rules",
+    "rule1": "Spoken mentions of \"AI\", \"IA\" or \"Artificial Intelligence\" count (in any language).",
+    "rule2": "You must sign in with Google to participate.",
+    "rule3": "One guess per user. Once submitted, it's locked and cannot be changed.",
+    "rule4": "The winner is decided by proximity to the actual total count and is notified by email.",
+    "deadline": "Deadline",
+    "challengeClosed": "The deadline for guesses has passed. We'll publish the final count and notify the winner soon.",
+    "signInTitle": "Sign in to participate",
+    "signInDescription": "We need to identify you to record your guess and contact you if you win.",
+    "signInGoogle": "Continue with Google",
+    "signOut": "Sign out",
+    "signedInAs": "Signed in as",
+    "totalGuess": "Total guess",
+    "totalGuessHelp": "Total times \"AI\" / \"Artificial Intelligence\" will be said during the whole event",
+    "perTalkGuess": "Guess per talk",
+    "perTalkHelp": "How many mentions in each talk (optional but recommended)",
+    "submit": "Submit my guess",
+    "update": "Update my guess",
+    "saving": "Saving…",
+    "saved": "Guess saved successfully.",
+    "errorSaving": "There was an error saving your guess. Please try again.",
+    "errorSignIn": "Sign in failed. Please try again.",
+    "yourGuess": "Your current guess",
+    "alreadyGuessed": "You've already submitted your guess. It's locked and can't be changed. Good luck! 🎲",
+    "noActiveEvent": "There is no active event for the challenge yet. Check back later!",
+    "loading": "Loading…"
   }
 }

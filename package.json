@@ -7,7 +7,9 @@
     "start": "next start",
     "generate:types": "payload generate:types",
     "generate:importmap": "payload generate:importmap",
-    "seed": "tsx src/seed.ts"
+    "seed": "tsx src/seed.ts",
+    "dataconnect:deploy": "npx firebase-tools deploy --only dataconnect",
+    "dataconnect:emulator": "npx firebase-tools emulators:start --only dataconnect"
   },
   "repository": {
     "type": "git",
@@ -36,6 +38,7 @@
     "clsx": "^2.1.1",
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
+    "firebase": "^12.13.0",
     "graphql": "^16.12.0",
     "lucide-react": "^0.563.0",
     "next": "^15.4.11",

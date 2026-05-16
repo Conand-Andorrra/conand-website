@@ -76,5 +76,38 @@
   "notFound": {
     "title": "Página no encontrada",
     "back": "Volver al inicio"
+  },
+  "aiChallenge": {
+    "kicker": "Reto CONAND",
+    "title": "AI Counter Challenge",
+    "subtitle": "¿Cuántas veces se dirá «AI», «IA» o «Inteligencia Artificial» durante todo el evento?",
+    "description": "Adivina el número total de menciones a «AI», «IA» o «Inteligencia Artificial» a lo largo del evento, y también el recuento por cada charla. Tienes **una sola oportunidad por usuario**: una vez enviada tu estimación no la podrás modificar, así que piénsalo bien. El plazo para participar acaba a las 23:59 del día del evento.",
+    "prizeNotice": "Hay un premio para la persona que más se acerque al recuento real. Una vez nosotros (o nuestro agente de IA 🤖) hayamos hecho el recuento definitivo, te avisaremos por correo electrónico si has ganado.",
+    "rules": "Reglas",
+    "rule1": "Cuentan las menciones habladas de «AI», «IA» o «Inteligencia Artificial» (en cualquier idioma).",
+    "rule2": "Hay que iniciar sesión con Google para participar.",
+    "rule3": "Una sola estimación por usuario. Una vez enviada queda registrada y no se puede modificar.",
+    "rule4": "El ganador se decide por proximidad al recuento total real y se avisa por correo.",
+    "deadline": "Fecha límite",
+    "challengeClosed": "El plazo para hacer estimaciones se ha cerrado. Pronto publicaremos el recuento final y avisaremos al ganador.",
+    "signInTitle": "Inicia sesión para participar",
+    "signInDescription": "Necesitamos identificarte para registrar tu estimación y contactar contigo si ganas.",
+    "signInGoogle": "Continuar con Google",
+    "signOut": "Cerrar sesión",
+    "signedInAs": "Sesión iniciada como",
+    "totalGuess": "Estimación total",
+    "totalGuessHelp": "Total de veces que se dirá «AI», «IA» o «Inteligencia Artificial» en todo el evento",
+    "perTalkGuess": "Estimación por charla",
+    "perTalkHelp": "Cuántas menciones en cada charla (opcional, pero recomendado)",
+    "submit": "Enviar mi estimación",
+    "update": "Actualizar mi estimación",
+    "saving": "Guardando…",
+    "saved": "Estimación guardada correctamente.",
+    "errorSaving": "Hubo un error guardando tu estimación. Inténtalo de nuevo.",
+    "errorSignIn": "No se pudo iniciar sesión. Inténtalo de nuevo.",
+    "yourGuess": "Tu estimación actual",
+    "alreadyGuessed": "Ya has hecho tu estimación. Queda registrada y no se puede modificar. ¡Buena suerte! 🎲",
+    "noActiveEvent": "Aún no hay ningún evento activo para el reto. ¡Vuelve más tarde!",
+    "loading": "Cargando…"
   }
 }

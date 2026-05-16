@@ -1,0 +1,5 @@
+connectorId: "default"
+generate:
+  javascriptSdk:
+    outputDir: "../../src/dataconnect-generated/default"
+    package: "@dataconnect/default"

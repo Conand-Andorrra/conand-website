@@ -1,0 +1,13 @@
+# AI Counter Challenge — one row per (user, event).
+# perTalkGuesses is JSON: { "<talkId>": <count>, ... }.
+type Guess @table(name: "guesses", key: ["userId", "eventId"]) {
+  userId: String!
+  eventId: String!
+  userName: String!
+  userEmail: String!
+  userPhotoURL: String
+  totalGuess: Int!
+  perTalkGuesses: Any
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+}

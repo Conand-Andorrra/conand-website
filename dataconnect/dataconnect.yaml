@@ -1,0 +1,11 @@
+specVersion: "v1"
+serviceId: "conand-cd515-service"
+location: "europe-southwest1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "conand-cd515-instance"
+connectorDirs: ["./default"]

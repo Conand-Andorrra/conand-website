@@ -1,0 +1,51 @@
+# Retired: kept deployed so existing clients don't break, but no longer used.
+# Removed from generated SDKs. Use InsertMyGuess instead.
+mutation UpsertMyGuess(
+  $eventId: String!
+  $userName: String!
+  $userEmail: String!
+  $userPhotoURL: String
+  $totalGuess: Int!
+  $perTalkGuesses: Any
+) @auth(level: USER) @retired {
+  guess_upsert(
+    data: {
+      userId_expr: "auth.uid"
+      eventId: $eventId
+      userName: $userName
+      userEmail: $userEmail
+      userPhotoURL: $userPhotoURL
+      totalGuess: $totalGuess
+      perTalkGuesses: $perTalkGuesses
+      createdAt_expr: "request.time"
+      updatedAt_expr: "request.time"
+    }
+  )
+}
+
+# Insert a guess. userId is forced to auth.uid server-side so users cannot
+# write to other people's rows. We use insert (not upsert) so that once a
+# user has guessed, a second attempt fails on the (userId, eventId) primary
+# key — guesses are one-shot and immutable at the DB level.
+mutation InsertMyGuess(
+  $eventId: String!
+  $userName: String!
+  $userEmail: String!
+  $userPhotoURL: String
+  $totalGuess: Int!
+  $perTalkGuesses: Any
+) @auth(level: USER) {
+  guess_insert(
+    data: {
+      userId_expr: "auth.uid"
+      eventId: $eventId
+      userName: $userName
+      userEmail: $userEmail
+      userPhotoURL: $userPhotoURL
+      totalGuess: $totalGuess
+      perTalkGuesses: $perTalkGuesses
+      createdAt_expr: "request.time"
+      updatedAt_expr: "request.time"
+    }
+  )
+}

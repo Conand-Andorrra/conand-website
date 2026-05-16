@@ -76,5 +76,38 @@
   "notFound": {
     "title": "Page non trouvée",
     "back": "Retour à l'accueil"
+  },
+  "aiChallenge": {
+    "kicker": "Défi CONAND",
+    "title": "AI Counter Challenge",
+    "subtitle": "Combien de fois dira-t-on « AI », « IA » ou « Intelligence Artificielle » pendant l'évènement ?",
+    "description": "Devinez le nombre total de mentions de « AI », « IA » ou « Intelligence Artificielle » durant l'évènement, et aussi le nombre par conférence. Vous n'avez **qu'une seule chance par utilisateur** : une fois envoyée, votre estimation est verrouillée et ne peut plus être modifiée — réfléchissez bien. La participation se clôt à 23:59 le jour de l'évènement.",
+    "prizeNotice": "Il y a un prix pour la personne qui se rapproche le plus du décompte réel. Une fois que nous (ou notre agent d'IA 🤖) aurons fait le décompte final, nous vous enverrons un email si vous avez gagné.",
+    "rules": "Règles",
+    "rule1": "On compte les mentions parlées de « AI », « IA » ou « Intelligence Artificielle » (dans toutes les langues).",
+    "rule2": "Connexion avec Google requise pour participer.",
+    "rule3": "Une seule estimation par utilisateur. Une fois envoyée, elle est verrouillée et ne peut plus être modifiée.",
+    "rule4": "Le gagnant est déterminé par la proximité avec le total réel et est notifié par email.",
+    "deadline": "Date limite",
+    "challengeClosed": "Le délai pour les estimations est dépassé. Nous publierons bientôt le décompte final et notifierons le gagnant.",
+    "signInTitle": "Connectez-vous pour participer",
+    "signInDescription": "Nous avons besoin de vous identifier pour enregistrer votre estimation et vous contacter si vous gagnez.",
+    "signInGoogle": "Continuer avec Google",
+    "signOut": "Déconnexion",
+    "signedInAs": "Connecté en tant que",
+    "totalGuess": "Estimation totale",
+    "totalGuessHelp": "Nombre total de fois où « AI » / « Intelligence Artificielle » sera dit pendant l'évènement",
+    "perTalkGuess": "Estimation par conférence",
+    "perTalkHelp": "Combien de mentions dans chaque conférence (optionnel mais recommandé)",
+    "submit": "Envoyer mon estimation",
+    "update": "Mettre à jour mon estimation",
+    "saving": "Enregistrement…",
+    "saved": "Estimation enregistrée avec succès.",
+    "errorSaving": "Une erreur s'est produite. Veuillez réessayer.",
+    "errorSignIn": "Échec de la connexion. Veuillez réessayer.",
+    "yourGuess": "Votre estimation actuelle",
+    "alreadyGuessed": "Vous avez déjà soumis votre estimation. Elle est verrouillée et ne peut plus être modifiée. Bonne chance ! 🎲",
+    "noActiveEvent": "Aucun évènement actif pour le défi pour le moment. Revenez plus tard !",
+    "loading": "Chargement…"
   }
 }
