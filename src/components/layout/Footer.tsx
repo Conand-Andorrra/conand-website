@@ -82,28 +82,47 @@ export function Footer({ locale, t, social }: FooterProps) {
             </nav>
           </div>
 
-          {/* GDG Andorra */}
+          {/* Communities */}
           <div>
             <h3 className="mb-4 font-teko text-lg font-semibold uppercase tracking-wider text-beige/60">
               Community
             </h3>
-            <a
-              href="https://gdg.community.dev/gdg-andorra/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 transition-opacity hover:opacity-80"
-            >
-              <Image
-                src="/img/logo_gdg.png"
-                alt="GDG Andorra"
-                width={56}
-                height={44}
-                className="shrink-0"
-              />
-              <span className="text-sm font-medium text-beige/50 transition-colors group-hover:text-turquoise">
-                GDG Andorra
-              </span>
-            </a>
+            <div className="flex flex-col gap-3">
+              <a
+                href="https://gdg.community.dev/gdg-andorra/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 transition-opacity hover:opacity-80"
+              >
+                <Image
+                  src="/img/logo_gdg.png"
+                  alt="GDG Andorra"
+                  width={56}
+                  height={44}
+                  className="shrink-0"
+                />
+                <span className="text-sm font-medium text-beige/50 transition-colors group-hover:text-turquoise">
+                  GDG Andorra
+                </span>
+              </a>
+              <a
+                href="https://www.meetup.com/aws-ug-andorra/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 transition-opacity hover:opacity-80"
+              >
+                <Image
+                  src="/img/logo_aws_ug.png"
+                  alt="AWS User Group Andorra"
+                  width={44}
+                  height={44}
+                  className="shrink-0"
+                />
+                <span className="text-sm font-medium text-beige/50 transition-colors group-hover:text-turquoise">
+                  AWS User Group Andorra
+                </span>
+              </a>
+            </div>
           </div>
 
           {/* Social */}

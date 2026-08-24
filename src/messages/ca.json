@@ -25,7 +25,9 @@
     "whatIsConand": "Què és CONAND?",
     "conandDescription": "CONAND (Conference Andorra) és la conferència tecnològica d'Andorra, organitzada per i per a la comunitat. Reunim professionals, estudiants i entusiastes del sector en meetups, tallers i una gran conferència anual per compartir coneixement, crear connexions i impulsar l'ecosistema tech local.",
     "gdgTitle": "Google Developer Group Andorra",
-    "gdgDescription": "CONAND és el Google Developer Group (GDG) oficial d'Andorra. Els GDG són comunitats locals de desenvolupadors que es reuneixen per aprendre, compartir i créixer junts amb tecnologies de Google i més enllà. Forma part de la nostra comunitat!"
+    "gdgDescription": "CONAND és el Google Developer Group (GDG) oficial d'Andorra. Els GDG són comunitats locals de desenvolupadors que es reuneixen per aprendre, compartir i créixer junts amb tecnologies de Google i més enllà. Forma part de la nostra comunitat!",
+    "awsTitle": "AWS User Group Andorra",
+    "awsDescription": "CONAND també forma part de l'AWS User Group d'Andorra, la comunitat local de persones que treballen amb Amazon Web Services. Ens trobem per compartir experiències, aprendre sobre el núvol i connectar amb altres professionals. Uneix-t'hi a Meetup!"
   },
   "countdown": {
     "days": "Dies",

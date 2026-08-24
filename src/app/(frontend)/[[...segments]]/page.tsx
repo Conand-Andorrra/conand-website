@@ -139,7 +139,7 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* What is CONAND + GDG */}
+      {/* What is CONAND + Communities */}
       <section className="relative border-t border-white/5 py-24">
         <div className="dot-pattern absolute inset-0 opacity-10" />
         <div className="relative mx-auto max-w-[1280px] px-6">
@@ -156,11 +156,12 @@ export default async function HomePage() {
             </p>
           </div>
 
-          {/* GDG */}
-          <div className="mx-auto mt-16 max-w-2xl">
-            <div className="glass rounded-2xl p-8 text-center md:p-10">
+          {/* Communities: GDG + AWS User Group */}
+          <div className="mx-auto mt-16 grid max-w-5xl gap-6 md:grid-cols-2">
+            {/* GDG */}
+            <div className="glass flex flex-col rounded-2xl p-8 text-center md:p-10">
               <div className="relative mx-auto mb-5 h-16 w-16">
-                <Image src="/img/logo_gdg.png" alt="GDG" fill className="object-contain" />
+                <Image src="/img/logo_gdg.png" alt="GDG Andorra" fill sizes="64px" className="object-contain" />
               </div>
               <h3 className="mb-3 font-teko text-2xl font-bold text-beige md:text-3xl">
                 {translate(locale, 'home.gdgTitle')}
@@ -172,9 +173,37 @@ export default async function HomePage() {
                 href="https://gdg.community.dev/gdg-andorra/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-turquoise px-6 py-3 font-semibold text-dark transition-all hover:shadow-lg hover:shadow-turquoise/25"
+                className="mt-auto inline-flex items-center justify-center gap-2 self-center rounded-xl bg-turquoise px-6 py-3 font-semibold text-dark transition-all hover:shadow-lg hover:shadow-turquoise/25"
               >
                 GDG Andorra
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+
+            {/* AWS User Group */}
+            <div className="glass flex flex-col rounded-2xl p-8 text-center md:p-10">
+              <div className="relative mx-auto mb-5 h-16 w-16">
+                <Image
+                  src="/img/logo_aws_ug.png"
+                  alt="AWS User Group Andorra"
+                  fill
+                  sizes="64px"
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="mb-3 font-teko text-2xl font-bold text-beige md:text-3xl">
+                {translate(locale, 'home.awsTitle')}
+              </h3>
+              <p className="mb-6 leading-relaxed text-beige/60">
+                {translate(locale, 'home.awsDescription')}
+              </p>
+              <Link
+                href="https://www.meetup.com/aws-ug-andorra/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto inline-flex items-center justify-center gap-2 self-center rounded-xl bg-turquoise px-6 py-3 font-semibold text-dark transition-all hover:shadow-lg hover:shadow-turquoise/25"
+              >
+                AWS UG Andorra
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

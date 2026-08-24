@@ -119,10 +119,29 @@ export function Header({ locale, t, events = [] }: HeaderProps) {
             href="https://gdg.community.dev/gdg-andorra/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-lg px-3 py-2 transition-all hover:bg-white/5"
+            className="group flex items-center gap-2 rounded-lg px-3 py-2 transition-all hover:bg-white/5"
           >
             <Image src="/img/logo_gdg.png" alt="GDG Andorra" width={40} height={32} className="shrink-0" />
             <span className="text-sm font-medium text-beige/70 transition-colors group-hover:text-beige">GDG</span>
+          </a>
+
+          {/* AWS User Group Andorra */}
+          <a
+            href="https://www.meetup.com/aws-ug-andorra/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2 rounded-lg px-3 py-2 transition-all hover:bg-white/5"
+          >
+            <Image
+              src="/img/logo_aws_ug.png"
+              alt="AWS User Group Andorra"
+              width={32}
+              height={32}
+              className="shrink-0"
+            />
+            <span className="text-sm font-medium text-beige/70 transition-colors group-hover:text-beige">
+              AWS UG
+            </span>
           </a>
 
           <div className="mx-2 h-5 w-px bg-white/10" />
@@ -183,7 +202,7 @@ export function Header({ locale, t, events = [] }: HeaderProps) {
                   </SheetClose>
                 ))}
 
-                {/* GDG Andorra mobile */}
+                {/* Communities mobile */}
                 <div className="section-divider mx-4 my-2" />
                 <SheetClose asChild>
                   <a
@@ -194,6 +213,23 @@ export function Header({ locale, t, events = [] }: HeaderProps) {
                   >
                     <Image src="/img/logo_gdg.png" alt="GDG" width={40} height={32} className="shrink-0" />
                     GDG Andorra
+                  </a>
+                </SheetClose>
+                <SheetClose asChild>
+                  <a
+                    href="https://www.meetup.com/aws-ug-andorra/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 rounded-lg px-4 py-3 text-lg font-medium text-beige/70 transition-colors hover:bg-white/5 hover:text-turquoise"
+                  >
+                    <Image
+                      src="/img/logo_aws_ug.png"
+                      alt="AWS User Group Andorra"
+                      width={36}
+                      height={36}
+                      className="shrink-0"
+                    />
+                    AWS UG Andorra
                   </a>
                 </SheetClose>
               </nav>
